@@ -1,0 +1,18 @@
+interface:
+  display_name: "OpenBond"
+  short_description: "Connect OpenBond to Claude, Codex, and ChatGPT through JoAi's hosted MCP app server."
+  icon_small: "https://raw.githubusercontent.com/JoAiHQ/assets/refs/heads/main/apps/logos/openbond-black.svg"
+  icon_large: "https://raw.githubusercontent.com/JoAiHQ/assets/refs/heads/main/apps/logos/openbond-black.svg"
+  brand_color: "#98ff98"
+  default_prompt: "List the OpenBond tools available in this app."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "joai-openbond"
+      description: "OpenBond MCP server by JoAi"
+      transport: "streamable_http"
+      url: "https://cortex.joai.ai/mcp/apps/openbond"
